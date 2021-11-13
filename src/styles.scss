@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  accent-color: #9580FF !important;
+}
+:root {
+  --green: #50fa7b;
+  --green-lighter: #7FFCD8;
+  --green-darker: #059b70;
+  --white: #FFFFFF;
+  --bg: #22212c;
+  --font-family: Fira Code,monospace;
+  --font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: #FFFFFF;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
