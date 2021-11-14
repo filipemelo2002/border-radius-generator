@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rectangle',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rectangle.component.scss']
 })
 export class RectangleComponent implements OnInit {
+
+  @Input() topLeft = 50;
+  @Input() topRight = 50;
+  @Input() bottomLeft = 50;
+  @Input() bottomRight = 50;
 
   constructor() { }
 

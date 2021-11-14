@@ -1,0 +1,52 @@
+<form>
+  <div class="mb-3">
+    <label for="topLeft" class="form-label">Top Left: <strong>{{topLeft}}px</strong></label>
+    <input
+      #topLeftElement
+      type="range"
+      id="topLeft"
+      min="0"
+      max="100"
+      [value]="topLeft"
+      (input)="onChangeTopLeft(topLeftElement.value)"
+      aria-label="Top Left"
+    >
+  </div>
+  <div class="mb-3">
+    <label for="topRight" class="form-label">Top Right: <strong>{{topRight}}px</strong></label>
+    <input
+    #topRightElement
+    [value]="topRight"
+    (input)="onChangeTopRight(topRightElement.value)"
+    type="range"
+    id="topRight"
+    min="0"
+    max="100"
+    aria-label="Top Left">
+  </div>
+  <div class="mb-3">
+    <label for="bottomLeft" class="form-label">Bottom Left: <strong>{{bottomLeft}}px</strong></label>
+    <input
+      #bottomLeftElement
+      [value]="bottomLeft"
+      (input)="onChangeBottomLeft(bottomLeftElement.value)"
+      type="range"
+      id="bottomLeft"
+      min="0"
+      max="100"
+      aria-label="Top Left">
+  </div>
+  <div class="mb-3">
+    <label for="bottomRight" class="form-label">Bottom Right: <strong>{{bottomRight}}px</strong></label>
+    <input
+    #bottomRightElement
+    [value]="bottomRight"
+    (input)="onChangeBottomRight(bottomRightElement.value)"
+    type="range"
+    id="bottomRight"
+    min="0"
+    max="100"
+    aria-label="Top Left">
+  </div>
+
+</form>
