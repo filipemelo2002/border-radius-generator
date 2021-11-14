@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RectangleComponent implements OnInit {
 
   @Input() topLeft = 50;
+  @Input() topRight = 50;
+  @Input() bottomLeft = 50;
+  @Input() bottomRight = 50;
 
   constructor() { }
 

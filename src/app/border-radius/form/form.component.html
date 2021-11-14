@@ -13,8 +13,11 @@
     >
   </div>
   <div class="mb-3">
-    <label for="topRight" class="form-label">Top Right</label>
+    <label for="topRight" class="form-label">Top Right: <strong>{{topRight}}px</strong></label>
     <input
+    #topRightElement
+    [value]="topRight"
+    (input)="onChangeTopRight(topRightElement.value)"
     type="range"
     id="topRight"
     min="0"
@@ -22,17 +25,23 @@
     aria-label="Top Left">
   </div>
   <div class="mb-3">
-    <label for="bottomLeft" class="form-label">Bottom Left</label>
+    <label for="bottomLeft" class="form-label">Bottom Left: <strong>{{bottomLeft}}px</strong></label>
     <input
-    type="range"
-    id="bottomLeft"
-    min="0"
-    max="100"
-    aria-label="Top Left">
+      #bottomLeftElement
+      [value]="bottomLeft"
+      (input)="onChangeBottomLeft(bottomLeftElement.value)"
+      type="range"
+      id="bottomLeft"
+      min="0"
+      max="100"
+      aria-label="Top Left">
   </div>
   <div class="mb-3">
-    <label for="bottomRight" class="form-label">Bottom Right</label>
+    <label for="bottomRight" class="form-label">Bottom Right: <strong>{{bottomRight}}px</strong></label>
     <input
+    #bottomRightElement
+    [value]="bottomRight"
+    (input)="onChangeBottomRight(bottomRightElement.value)"
     type="range"
     id="bottomRight"
     min="0"
