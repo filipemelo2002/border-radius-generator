@@ -1,12 +1,16 @@
 <form>
   <div class="mb-3">
-    <label for="topLeft" class="form-label">Top Left</label>
+    <label for="topLeft" class="form-label">Top Left: <strong>{{topLeft}}px</strong></label>
     <input
-    type="range"
-    id="topLeft"
-    min="0"
-    max="100"
-    aria-label="Top Left">
+      #topLeftElement
+      type="range"
+      id="topLeft"
+      min="0"
+      max="100"
+      [value]="topLeft"
+      (input)="onChangeTopLeft(topLeftElement.value)"
+      aria-label="Top Left"
+    >
   </div>
   <div class="mb-3">
     <label for="topRight" class="form-label">Top Right</label>

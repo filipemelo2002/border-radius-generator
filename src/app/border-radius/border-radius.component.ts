@@ -6,8 +6,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./border-radius.component.scss']
 })
 export class AppComponent {
-  title = 'border-radius-generator';
 
-  @Output() onChangeTopLeft = new EventEmitter<number>();
+  topLeft = 50;
 
+  onChangeTopLeft(value: number) {
+    this.topLeft = value;
+  }
 }

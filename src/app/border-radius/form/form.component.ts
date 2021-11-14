@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +7,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  @Input() topLeft = 50;
+  @Output() changeTopLeft = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onChangeTopLeft(value: string) {
+    this.changeTopLeft.emit(Number(value));
+  }
 }
