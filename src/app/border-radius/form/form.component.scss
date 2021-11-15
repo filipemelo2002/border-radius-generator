@@ -2,12 +2,25 @@ form {
   padding: 1.5rem;
   border: 2px solid var(--green);
   border-radius: 1rem;
+
+  input {
+    background-image: linear-gradient(to right, var(--green), var(--green-lighter));
+    width: 100%;
+    height: 0.1rem;
+    padding: 0;
+    appearance: none;
+  }
+
+  .select-wrapper {
+    background-image: linear-gradient(to right, var(--green), var(--green-lighter));
+    padding: 0.125rem;
+    border-radius: 0.5rem;
+    select {
+      background-color: var(--bg);
+      border-radius: 0.25rem;
+      border: 0;
+      color: var(--white);
+    }
+  }
 }
-input {
-  accent-color: var(--green-darker) !important;
-  background-image: linear-gradient(to right, var(--green), var(--green-lighter));
-  width: 100%;
-  height: 0.1rem;
-  padding: 0;
-  appearance: none;
-}
+
