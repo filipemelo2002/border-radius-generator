@@ -12,6 +12,8 @@ export class AppComponent {
   bottomLeft = 50;
   bottomRight = 50;
 
+  unit = "px";
+
   onChangeTopLeft(value: number) {
     this.topLeft = value;
   }
@@ -26,5 +28,9 @@ export class AppComponent {
 
   onChangeBottomRight(value: number) {
     this.bottomRight = value;
+  }
+
+  onChangeUnit(value: string) {
+    this.unit = value;
   }
 }

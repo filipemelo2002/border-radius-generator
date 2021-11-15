@@ -19,6 +19,9 @@ export class FormComponent implements OnInit {
   @Input() bottomRight = 50;
   @Output() changeBottomRight = new EventEmitter<number>();
 
+  @Input() unit = 'px';
+  @Output() changeUnit = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -38,5 +41,9 @@ export class FormComponent implements OnInit {
 
   onChangeBottomRight(value: string) {
     this.changeBottomRight.emit(Number(value));
+  }
+
+  onChangeUnit(value: string) {
+    this.changeUnit.emit(value);
   }
 }
