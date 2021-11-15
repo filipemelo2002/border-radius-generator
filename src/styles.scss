@@ -1,8 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
 
 * {
-  accent-color: #9580FF !important;
+  accent-color: #059b70 !important;
 }
+
 :root {
   --green: #50fa7b;
   --green-lighter: #7FFCD8;

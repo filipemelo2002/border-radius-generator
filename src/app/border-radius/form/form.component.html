@@ -1,6 +1,6 @@
 <form>
   <div class="mb-3">
-    <label for="topLeft" class="form-label">Top Left: <strong>{{topLeft}}px</strong></label>
+    <label for="topLeft" class="form-label">Top Left: <strong>{{topLeft}}{{unit}}</strong></label>
     <input
       #topLeftElement
       type="range"
@@ -13,7 +13,7 @@
     >
   </div>
   <div class="mb-3">
-    <label for="topRight" class="form-label">Top Right: <strong>{{topRight}}px</strong></label>
+    <label for="topRight" class="form-label">Top Right: <strong>{{topRight}}{{unit}}</strong></label>
     <input
     #topRightElement
     [value]="topRight"
@@ -25,7 +25,7 @@
     aria-label="Top Left">
   </div>
   <div class="mb-3">
-    <label for="bottomLeft" class="form-label">Bottom Left: <strong>{{bottomLeft}}px</strong></label>
+    <label for="bottomLeft" class="form-label">Bottom Left: <strong>{{bottomLeft}}{{unit}}</strong></label>
     <input
       #bottomLeftElement
       [value]="bottomLeft"
@@ -37,7 +37,7 @@
       aria-label="Top Left">
   </div>
   <div class="mb-3">
-    <label for="bottomRight" class="form-label">Bottom Right: <strong>{{bottomRight}}px</strong></label>
+    <label for="bottomRight" class="form-label">Bottom Right: <strong>{{bottomRight}}{{unit}}</strong></label>
     <input
     #bottomRightElement
     [value]="bottomRight"
@@ -48,5 +48,19 @@
     max="100"
     aria-label="Top Left">
   </div>
-
+  <div class="mb-3">
+    <label for="unit" class="form-label">Unit of Measurement:</label>
+    <div class="select-wrapper">
+      <select
+        class="form-select"
+        (change)="onChangeUnit(unitElement.value)"
+        id="unit"
+        #unitElement>
+        <option value="rem" [selected]="unit === 'rem'">rem</option>
+        <option value="%" [selected]="unit === '%'">%</option>
+        <option value="px" [selected]="unit === 'px'">px</option>
+        <option value="pt" [selected]="unit === 'pt'">pt</option>
+      </select>
+    </div>
+  </div>
 </form>

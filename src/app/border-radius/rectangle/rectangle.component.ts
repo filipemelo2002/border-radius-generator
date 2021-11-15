@@ -11,7 +11,7 @@ export class RectangleComponent implements OnInit {
   @Input() topRight = 50;
   @Input() bottomLeft = 50;
   @Input() bottomRight = 50;
-
+  @Input() unit = "px";
   constructor() { }
 
   ngOnInit(): void {
